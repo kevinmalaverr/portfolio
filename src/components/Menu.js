@@ -1,5 +1,7 @@
 import React from 'react'
 
+import { Link } from 'react-router-dom'
+
 import './styles/Menu.css'
 class Menu extends React.Component{
 
@@ -34,10 +36,10 @@ class Menu extends React.Component{
           <div className="bar3"></div>
         </div>
           <ul className="items" id="menuList">
-            <li><a href="">Home</a></li>
-            <li><a href="">Portfolio</a></li>
-            <li><a href="">About</a></li>
-            <li><a href="">Contact</a></li>
+            <li><Link to="/">Home</Link></li>
+            <li><Link to="/portfolio">Portfolio</Link></li>
+            <li><Link to="/about">About</Link></li>
+            <li><Link to="/contact">Contact</Link></li>
           </ul>
         </nav> 
       </div>

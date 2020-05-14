@@ -8,7 +8,6 @@ class Home extends React.Component{
   render(){
       return(
         <div className="home">
-          <Menu/>
           <div className="hero">
             <div className="text">
                 <h1>HELLO, I AM A</h1>

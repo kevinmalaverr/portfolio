@@ -1,8 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import Home from './pages/Home';
-import Contact from './pages/Contact';
+import App from './components/App'
 import * as serviceWorker from './serviceWorker';
 
 //bootstrap dependencies
@@ -12,7 +10,7 @@ import Popper from 'popper.js';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 
 ReactDOM.render(
-  <Contact></Contact>,
+  <App/>,
   document.getElementById('root')
 );
 
