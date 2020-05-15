@@ -8,6 +8,11 @@
   align-items: center;
   padding: 24px;
   height: 90vh;
+
+  animation-name: fadeIn;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 600ms;
 }
 
 .social{
@@ -64,6 +69,11 @@ text-align: center;
   height: 24px;
 }
 
+.image{
+  width: 42px;
+}
+
+
 @keyframes moveUp {
 0% {
       opacity: 0;
@@ -74,6 +84,16 @@ text-align: center;
       margin-top: 0;
   }
 }
+
+@keyframes fadeIn {
+  0% {
+        opacity: 0;
+    }
+  100% {
+        opacity: 1;
+    }
+  }
+
 
 @media screen and (max-width:780px){
   
