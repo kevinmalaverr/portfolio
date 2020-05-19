@@ -4,7 +4,7 @@ import App from './components/App'
 import * as serviceWorker from './serviceWorker';
 import firebase from 'firebase'
 import firebaseConfig from './FirebaseConf'
-  
+import './index.css'
 
 //bootstrap dependencies
 import 'bootstrap/dist/css/bootstrap.min.css';

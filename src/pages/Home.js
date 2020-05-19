@@ -7,14 +7,14 @@ import firebase from "../FirebaseConf"
 class Home extends React.Component{ 
 
   state = {
+    loading: true,
     imgUrls : [
-      firebase.images + "React.png" + "?alt=media",
-      firebase.images + "Sass.png" + "?alt=media",
-      firebase.images + "html5.png" + "?alt=media",
-      firebase.images + "css3.png" + "?alt=media",
-      firebase.images + "JS.png" + "?alt=media",
+      "https://firebasestorage.googleapis.com/v0/b/portfolio-ddcf3.appspot.com/o/React.png?alt=media",
+      "https://firebasestorage.googleapis.com/v0/b/portfolio-ddcf3.appspot.com/o/Sass.png?alt=media",
+      "https://firebasestorage.googleapis.com/v0/b/portfolio-ddcf3.appspot.com/o/html5.png?alt=media",
+      "https://firebasestorage.googleapis.com/v0/b/portfolio-ddcf3.appspot.com/o/css3.png?alt=media",
+      "https://firebasestorage.googleapis.com/v0/b/portfolio-ddcf3.appspot.com/o/JS.png?alt=media",
     ]
-
   }
 
   render(){
@@ -22,10 +22,11 @@ class Home extends React.Component{
         <div className="home">
           <div className="hero">
             <div className="text">
-                <h1>HELLO, I AM A</h1>
-                <h1 className="l2">FRONTEND</h1>
-                <h1 className="l3">DEVELOPER</h1>
+                <h1>WELCOME</h1>
+                <h1>I AM A</h1>
+                <h1>WELCOME</h1>
             </div>
+            <p></p>
             <div className="images">
             {this.state.imgUrls.map((value)=>{
               return(
@@ -33,7 +34,7 @@ class Home extends React.Component{
               ) 
             })}
             </div>
-            <Link to="/portfolio" className="btn-1" id="goPort">SEE PORTFOLIO</Link>
+            <Link to="/portfolio" className="btn btn-primary" id="goPort">SEE PORTFOLIO</Link>
             <div className="social">
                 <a href="https://github.com/kevinmalaverr">
                     <div className="icon github-icon"></div>

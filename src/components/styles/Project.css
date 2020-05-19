@@ -1,3 +1,31 @@
 .project{
-    
+    border-radius: 5px;
+    background-color: #fff;
+    width: 100%;
+    display: flex;
+    padding: 0.8em;
+    background: white;
+    min-height: 200px;
+    box-shadow: 0 0.7em 18px #EAEEF8;
+    flex-direction: column;
+    border: 1px solid #EAEEF8;
+}
+
+.project__tech{
+    display: flex;
+    justify-content: center;
+}
+
+.project__btn{
+    margin-top: 12px;
+    display: flex;
+    justify-content: center;
+}
+ .project__btn a:first-child{
+    margin-right: 8px;
+ }
+
+.project__image{
+    width: 100%;
+    border-radius: 8px;
 }

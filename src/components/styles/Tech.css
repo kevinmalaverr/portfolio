@@ -1,0 +1,19 @@
+.tech{
+    display: flex;
+    background-color: rgb(229, 237, 245);
+    margin-right: 8px;
+    border-radius: 4px;
+    padding: 2px 8px;
+    align-items: center;
+}
+
+.tech img{
+    width: 18px;
+    margin-right: 4px;
+}
+
+.tech span{
+    font-size: 0.7em;
+    font-weight: 600;
+    color: #444;
+} 

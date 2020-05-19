@@ -6,7 +6,6 @@ const firebaseConfig = {
   storageBucket: "portfolio-ddcf3.appspot.com",
   messagingSenderId: "59067678152",
   appId: "1:59067678152:web:8f5790d971e779766e54fd",
-  images: "https://firebasestorage.googleapis.com/v0/b/portfolio-ddcf3.appspot.com/o/"
 };
 // Initialize Firebase
 

@@ -1,0 +1,17 @@
+.portfolio{
+    display: grid;
+    justify-content: center;
+    margin: auto;
+    margin-top: 24px;
+    width: 80%;
+    max-width: 900px;
+    grid-template-columns: repeat(2,1fr);
+    gap: 16px;
+}
+
+@media screen and (max-width:720px){
+    .portfolio{
+        grid-template-columns: 1fr;
+        width: 90%;
+    }
+}

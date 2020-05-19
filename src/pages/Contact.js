@@ -9,9 +9,9 @@ class Contact extends React.Component{
 
   state= {
     form:{
-      email: "hola@algo.com",
-      subject: "que",
-      description: "hace",
+      email: "",
+      subject: "",
+      description: "",
     },
     loading:false,
     error: undefined,
@@ -20,15 +20,10 @@ class Contact extends React.Component{
 
   constructor () {
     super()
+    
   }
 
   componentDidMount(){
-    // const nameRef = firebase.database().ref().child('object').child('name')
-    // nameRef.on('value', snapshot => {
-    //   this.setState({
-    //     name: snapshot.val()
-    //   })
-    // })
     
   }
 
@@ -101,7 +96,7 @@ class Contact extends React.Component{
           </div>
           
           <div className="form-group">
-            <label htmlFor="exampleFormControlTextarea1">Example textarea</label>
+            <label htmlFor="exampleFormControlTextarea1">Messagge</label>
             <textarea onChange={this.handleChange} className="form-control" name="description" id="exampleFormControlTextarea1" rows="5" value={this.state.form.description}></textarea>
           </div>
           <button className="btn btn-primary btn-send" onClick={this.handleClick}>Send</button>

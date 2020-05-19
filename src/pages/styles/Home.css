@@ -1,14 +1,11 @@
 .hero{
   display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr auto auto;
+  height: 90vh;
+  align-items: center;
+  align-content: center;
   justify-content: center;
   justify-items: center;
-  align-content: center;
-  align-items: center;
-  padding: 24px;
-  height: 90vh;
-
+  gap: 12px;
   animation-name: fadeIn;
   animation-iteration-count: 1;
   animation-timing-function: ease-in;
@@ -17,15 +14,16 @@
 
 .social{
   display: flex;
-  margin-bottom: 24px;
+  justify-content: center;
+  margin-top: 24px;
 }
 
 .text{
   animation-name: moveUp;
-animation-iteration-count: 1;
-animation-timing-function: ease-in;
-animation-duration: 600ms;
-text-align: center;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 600ms;
+  text-align: center;
 }
 
 
@@ -69,39 +67,11 @@ text-align: center;
   height: 24px;
 }
 
+.images{
+  height: 42px;;
+  margin-bottom: 24px;
+}
+
 .image{
   width: 42px;
-}
-
-
-@keyframes moveUp {
-0% {
-      opacity: 0;
-      margin-top: 30px;
-  }
-100% {
-      opacity: 1;
-      margin-top: 0;
-  }
-}
-
-@keyframes fadeIn {
-  0% {
-        opacity: 0;
-    }
-  100% {
-        opacity: 1;
-    }
-  }
-
-
-@media screen and (max-width:780px){
-  
-  .l2{
-      font-size: 42px;
-  }
-  
-  .l3{
-      font-size: 32px;
-  }
 }

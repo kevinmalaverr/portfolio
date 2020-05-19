@@ -3,7 +3,7 @@ import Menu  from './Menu'
 
 function Layout(props){
     return(
-        <div>
+        <div className="layout">
             <Menu/>
             {props.children}
         </div>
