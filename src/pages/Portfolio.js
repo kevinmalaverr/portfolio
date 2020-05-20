@@ -4,6 +4,8 @@ import firebase from 'firebase'
 import firebaseConfig from '../FirebaseConf'
 import Loading from '../components/Loading'
 import './styles/Portfolio.css'
+import images from '../utils/images'
+
 
 class Portfolio extends React.Component{
 
@@ -54,10 +56,11 @@ class Portfolio extends React.Component{
                     return(
                         <Project key={i}
                         id={i}
-                        image = {project.image}
+                        image = {images[i][0]}
                         title = {project.title}
                         des = {project.des}
                         techs = {project.techs}
+                        buttons = {project.buttons}
                         ></Project>
                     )
                 })      

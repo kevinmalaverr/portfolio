@@ -1,5 +1,5 @@
 .project{
-    border-radius: 5px;
+    border-radius: 8px;
     background-color: #fff;
     width: 100%;
     display: flex;
@@ -21,8 +21,14 @@
     display: flex;
     justify-content: center;
 }
- .project__btn a:first-child{
+
+.project__btn a{
     margin-right: 8px;
+ }
+
+
+.project__btn a:last-child{
+    margin-right: 0;
  }
 
 .project__image{

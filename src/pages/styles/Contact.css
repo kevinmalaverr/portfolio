@@ -1,7 +1,7 @@
 .form{
-    width: 500px;
+    width: 90%;
+    max-width: 500px;
     margin: auto;
-    
     align-items: center;
     margin-top: 36px;
     background-color: #fff;    

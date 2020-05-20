@@ -7,6 +7,8 @@ import Contact from '../pages/Contact';
 import Portfolio from '../pages/Portfolio';
 import ProjectPage from '../pages/ProjectPage'
 
+import '../index.css'
+
 function App() {
   return (
     <BrowserRouter>

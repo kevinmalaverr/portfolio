@@ -4,6 +4,9 @@ import './styles/Project.css'
 import Tech from '../components/Tech'
 import {Link} from 'react-router-dom'
 
+import Techs from '../utils/Techs'
+
+
 class Project extends React.Component{
     render(){
         return(
@@ -17,13 +20,16 @@ class Project extends React.Component{
                 </div>
                 <div className="project__tech">
                     {this.props.techs.map((tech)=>{
-                        return <Tech url={tech.url}
+                        console.log(tech.url)
+                        return <Tech url={Techs[tech.url]}
                                     name = {tech.name}>
                                 </Tech>
                     })}
                 </div>
                 <div className="project__btn">
-                    <a href="" className="btn btn-primary">Web</a>
+                    {this.props.buttons.map(boton=>{
+                        return <a href={boton.url} className="btn btn-primary">{boton.name}</a>
+                    })}
                     <Link to={`/portfolio/${this.props.id}`} className="btn btn-primary">leer más</Link>
                 </div>
             </div>

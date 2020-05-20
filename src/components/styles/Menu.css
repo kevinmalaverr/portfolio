@@ -1,6 +1,6 @@
 .menu{
   display: flex;
-  z-index: 10;
+  z-index: 100;
   background-color: #fff;
   width: 100%;
   padding: 20px;

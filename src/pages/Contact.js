@@ -3,7 +3,7 @@ import './styles/Contact.css'
 import firebase from 'firebase'
 import Loading from '../components/Loading.js'
 import $ from 'jquery'
-import { Link } from 'react-router-dom'
+import { Link , Redirect} from 'react-router-dom'
 
 class Contact extends React.Component{
 
@@ -15,15 +15,12 @@ class Contact extends React.Component{
     },
     loading:false,
     error: undefined,
-    success:true
+    success:true,
+    submited :false
   }
 
   constructor () {
     super()
-    
-  }
-
-  componentDidMount(){
     
   }
 
@@ -34,7 +31,9 @@ class Contact extends React.Component{
     try {
       await firebase.database().ref().child("form").push(objeto)
       this.setState({loading:false, error:false, success:true})
-      $('#modal').modal('show')
+      setTimeout(() => {
+        $('#modal').modal('show')
+      }, 300); 
     } catch (e) {
       this.setState({loading:false, error: e })
       console.log(e)
@@ -57,6 +56,10 @@ class Contact extends React.Component{
     this.writeUserData(this.state.form) 
   }
 
+  handleExit = () =>{
+    this.setState({submited:true})
+  }
+
   render(){
     
     if(this.state.loading == true){
@@ -66,6 +69,11 @@ class Contact extends React.Component{
     if(this.state.error){
       return <h1>Error</h1>
     }
+
+    if(this.state.submited == true){
+      return <Redirect push to="/"/>
+    }
+
 
       return(
         <div>
@@ -79,7 +87,7 @@ class Contact extends React.Component{
                 The form has been send
               </div>
               <div className="modal-footer">
-                <Link to="/" type="button" className="btn btn-primary" data-dismiss="modal" >Ok</Link>
+                <a to="/" type="button" className="btn btn-primary" data-dismiss="modal" onClick={this.handleExit}>Ok</a>
               </div>
             </div>
           </div>
