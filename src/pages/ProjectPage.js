@@ -3,7 +3,10 @@ import firebase from 'firebase'
 import firebaseConfig from '../FirebaseConf'
 import Loading from '../components/Loading'
 import './styles/ProjectPage.css'
-import images from '../utils/images'
+import Carousel from '../components/Carousel'
+import Tech from '../components/Tech'
+import Techs from '../utils/Techs'
+
 
 class ProjectPage extends React.Component{
 
@@ -26,6 +29,10 @@ class ProjectPage extends React.Component{
 
         this.setState({loading:false})
     }
+
+    componentWillUpdate(){
+        
+    }
  
     render(){
 
@@ -33,44 +40,34 @@ class ProjectPage extends React.Component{
             return <Loading></Loading>
         }
 
+        
+
         return(
             <div className="projectPage">
+               
+               <Carousel imgId={this.props.match.params.projectId}></Carousel>
 
-
-                <div id="carouselExampleControls" className="carousel slide" data-ride="carousel">
-                    <div className="carousel-inner">
-                        {images[this.props.match.params.projectId].map((isrc,i)=>{
-                            if (i == 0){
-                                return(
-                                    <div className="carousel-item active">
-                                        <img src={isrc} className="d-block w-100" alt="..."/>
-                                    </div>
-                                )
-                            }
-                            return(
-                                <div className="carousel-item">
-                                    <img src={isrc} className="d-block w-100" alt="..."/>
-                                </div>
-                            )
-                        })}
-
-                    </div>
-                    
-                    <a className="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                        <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span className="sr-only">Previous</span>
-                    </a>
-                    <a className="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                        <span className="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span className="sr-only">Next</span>
-                    </a>
+               <div className="project__tech">
+                    {this.state.project.techs.map((tech)=>{
+                        console.log(tech.url)
+                        return <Tech url={Techs[tech.url]}
+                                    name = {tech.name}>
+                                </Tech>
+                    })}
                 </div>
+                    
+                    
+                <h1>{this.state.project.title}</h1>
+                <p>{this.state.project.des}</p>
                 
 
 
+                <div className="project__btn">
+                    {this.state.project.buttons.map(boton=>{
+                        return <a href={boton.url} className="btn btn-primary">{boton.name}</a>
+                    })}
+                </div>
 
-                <h1>{this.state.project.title}</h1>
-                <p>{this.state.project.des}</p>
             </div>
         )
     }

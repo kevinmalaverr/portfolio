@@ -14,6 +14,8 @@
 .project__tech{
     display: flex;
     justify-content: center;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
 }
 
 .project__btn{
@@ -34,4 +36,5 @@
 .project__image{
     width: 100%;
     border-radius: 8px;
+    margin-bottom: 24px;
 }

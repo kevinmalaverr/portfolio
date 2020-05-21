@@ -1,12 +1,9 @@
 .projectPage{
     padding: 24px;
     width: 90%;
-    max-width: 600px;
+    max-width: 800px;
     margin: auto;
     display: flex;
     flex-direction: column;
-}
-
-.carousel{
-    z-index: 1 !important;
+    
 }

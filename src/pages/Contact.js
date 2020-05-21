@@ -96,11 +96,11 @@ class Contact extends React.Component{
         <form className="form" onSubmit={this.handleSubmit}>
           <div className="form-group">
             <label htmlFor="exampleFormControlInput1">Email</label>
-            <input onChange={this.handleChange} name="email" type="email" className="form-control" placeholder="name@example.com" value={this.state.form.email}/>
+            <input onChange={this.handleChange} name="email" type="email" className="form-control" value={this.state.form.email}/>
           </div>
           <div className="form-group">
             <label htmlFor="exampleFormControlInput1">Subject</label>
-            <input onChange={this.handleChange} name="subject" className="form-control"  placeholder="subject" value={this.state.form.subject}/>
+            <input onChange={this.handleChange} name="subject" className="form-control" value={this.state.form.subject}/>
           </div>
           
           <div className="form-group">

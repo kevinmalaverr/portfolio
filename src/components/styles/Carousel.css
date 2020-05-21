@@ -1,0 +1,12 @@
+.carousel-item img{
+  width: 100%;
+}
+
+.carousel{
+  margin-bottom: 24px;
+}
+
+
+.carousel a{
+  background-color: rgba(0, 0, 50, .1);
+}
