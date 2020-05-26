@@ -30,7 +30,7 @@ class Project extends React.Component{
                     {this.props.buttons.map(boton=>{
                         return <a href={boton.url} className="btn btn-primary">{boton.name}</a>
                     })}
-                    <Link to={`/portfolio/${this.props.id}`} className="btn btn-primary">leer más</Link>
+                    <Link to={`/portfolio/${this.props.id}`} className="btn btn-primary">Read more</Link>
                 </div>
             </div>
 

@@ -80,17 +80,29 @@ a{
   }
 
   .show{
-    width: 50%;
+    width: 100%;
     display: block;
     background-color: white;
-    border: 1px solid #ddd;
+    border: none;
     padding-top: 64px;
     font-size: 1.2em;
     height: 100vh;
+    z-index: 100;
+  }
+
+  .items li{
+    margin: auto;
+    text-align: center;
+    margin-bottom: 24px;
+    width: 100%;
   }
 
   .menu__icon{
     display: inline-block;
+    z-index: 101;
+    position: absolute;
+    top:20px;
+    right: 20px;
   }
 }
 
