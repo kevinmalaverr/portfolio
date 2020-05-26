@@ -52,12 +52,20 @@ class Contact extends React.Component{
   }
   
   handleSubmit= e => {
+
     e.preventDefault()
     this.writeUserData(this.state.form) 
   }
 
   handleExit = () =>{
     this.setState({submited:true})
+  }
+
+  boton = () =>{
+    if(this.state.form.email.length > 0){
+      console.log("mayor")
+      return <button id="enviar" className="btn btn-primary btn-send" onClick={this.handleClick}>Send</button>
+    }
   }
 
   render(){
@@ -73,7 +81,6 @@ class Contact extends React.Component{
     if(this.state.submited == true){
       return <Redirect push to="/"/>
     }
-
 
       return(
         <div>
@@ -107,7 +114,12 @@ class Contact extends React.Component{
             <label htmlFor="exampleFormControlTextarea1">Messagge</label>
             <textarea onChange={this.handleChange} className="form-control" name="description" id="exampleFormControlTextarea1" rows="5" value={this.state.form.description}></textarea>
           </div>
-          <button className="btn btn-primary btn-send" onClick={this.handleClick}>Send</button>
+
+          {this.boton()}
+
+          
+
+          
         </form>
 
         </div>

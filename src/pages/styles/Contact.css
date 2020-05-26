@@ -11,3 +11,7 @@
 .btn-send{
     width: 100%;
 }
+
+.nodisplay{
+    display: none;
+}
